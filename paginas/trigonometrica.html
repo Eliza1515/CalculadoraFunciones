@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Función Trigonométrica</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js"></script>
+
+</head>
+
+
+<body>
+
+<header class="encabezado">
+
+    <h1>Función Trigonométrica</h1>
+
+    <p>
+        Calculadora y graficadora de funciones trigonométricas
+    </p>
+
+</header>
+
+
+<main class="contenedor">
+
+
+    <section>
+
+        <h2>Seleccione la función</h2>
+
+
+        <label for="tipoFuncion">
+            Tipo de función:
+        </label>
+
+
+        <select id="tipoFuncion">
+
+            <option value="sin">
+                Seno
+            </option>
+
+            <option value="cos">
+                Coseno
+            </option>
+
+            <option value="tan">
+                Tangente
+            </option>
+
+        </select>
+
+
+        <label for="amplitud">
+            Amplitud:
+        </label>
+
+
+        <input
+            type="number"
+            id="amplitud"
+            value="1"
+            step="0.1"
+        >
+
+
+        <label for="periodo">
+            Multiplicador de x:
+        </label>
+
+
+        <input
+            type="number"
+            id="periodo"
+            value="1"
+            step="0.1"
+        >
+
+
+        <label for="desplazamiento">
+            Desplazamiento vertical:
+        </label>
+
+
+        <input
+            type="number"
+            id="desplazamiento"
+            value="0"
+            step="0.1"
+        >
+
+
+        <button
+            id="calcular"
+            type="button">
+
+            Calcular
+
+        </button>
+
+
+        <a
+            href="../index.html"
+            class="volver">
+
+            ← Volver al menú principal
+
+        </a>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Resultados</h2>
+
+
+        <div id="resultado">
+
+            Seleccione una función y presione
+            "Calcular".
+
+        </div>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Tabla de valores</h2>
+
+        <div id="tablaValores"></div>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Gráfica</h2>
+
+        <div id="graficaFuncion"></div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Proyecto Final - Calculadora de Funciones
+    </p>
+
+</footer>
+
+
+<script src="../js/trigonometrica.js"></script>
+
+</body>
+
+</html>

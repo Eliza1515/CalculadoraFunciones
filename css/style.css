@@ -1,0 +1,936 @@
+/* ================================
+   CONFIGURACIÓN GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+
+    background:
+        radial-gradient(circle at 50% 25%, #172e69 0%, transparent 35%),
+        linear-gradient(135deg, #030b24, #071544 50%, #080c2c);
+
+    overflow-x: hidden;
+}
+
+
+/* ================================
+   CONTENEDOR
+================================ */
+
+.container {
+    position: relative;
+    z-index: 5;
+
+    width: min(1200px, 92%);
+    margin: auto;
+
+    padding: 65px 0 80px;
+}
+
+
+/* ================================
+   FONDO MATEMÁTICO
+================================ */
+
+.math-background {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+.formula {
+    position: absolute;
+
+    font-family: "Cambria Math", serif;
+    font-size: 38px;
+
+    color: #7f76ff;
+
+    opacity: 0.55;
+
+    animation: floatFormula 6s ease-in-out infinite;
+}
+
+.formula-1 {
+    left: 4%;
+    top: 14%;
+    transform: rotate(-8deg);
+}
+
+.formula-2 {
+    right: 5%;
+    top: 14%;
+    transform: rotate(-5deg);
+
+    animation-delay: 1s;
+}
+
+.formula-3 {
+    right: 3%;
+    top: 32%;
+
+    font-size: 85px;
+
+    animation-delay: 2s;
+}
+
+.formula-4 {
+    left: 3%;
+    bottom: 18%;
+
+    font-size: 75px;
+
+    animation-delay: 1.5s;
+}
+
+.formula-5 {
+    left: 9%;
+    bottom: 13%;
+
+    font-size: 55px;
+
+    color: #b45cff;
+}
+
+.formula-6 {
+    right: 7%;
+    bottom: 13%;
+
+    font-size: 75px;
+
+    color: #7059ff;
+
+    animation-delay: 2.5s;
+}
+
+
+@keyframes floatFormula {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-5deg);
+    }
+
+    50% {
+        transform: translateY(-18px) rotate(2deg);
+    }
+}
+
+
+/* ================================
+   GRAFICAS DEL FONDO
+================================ */
+
+.graph {
+    position: absolute;
+
+    width: 280px;
+
+    opacity: 0.55;
+}
+
+.graph svg {
+    width: 100%;
+    height: auto;
+}
+
+.graph line,
+.graph path {
+    fill: none;
+
+    stroke: #635cff;
+    stroke-width: 3;
+
+    stroke-linecap: round;
+}
+
+.graph-left {
+    left: 5%;
+    top: 28%;
+}
+
+.graph-right {
+    right: 5%;
+    top: 28%;
+}
+
+.graph-right path {
+    stroke: #635cff;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+.header {
+    position: relative;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: clamp(42px, 6vw, 70px);
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+
+    text-shadow:
+        0 0 20px rgba(120, 100, 255, 0.25);
+}
+
+.header h1 span {
+    background: linear-gradient(
+        90deg,
+        #b15cff,
+        #8066ff,
+        #4f8cff
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.header p {
+    margin-top: 10px;
+
+    font-size: 21px;
+
+    color: #d5daf5;
+}
+
+
+/* ================================
+   LINEAS DECORATIVAS
+================================ */
+
+.decor-lines {
+    position: absolute;
+
+    top: 35px;
+
+    width: 70px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.decor-lines span {
+    height: 5px;
+
+    border-radius: 20px;
+
+    background: linear-gradient(
+        90deg,
+        #8e52ff,
+        #17c8ff
+    );
+}
+
+.left-lines {
+    left: 17%;
+    transform: rotate(35deg);
+}
+
+.right-lines {
+    right: 17%;
+    transform: rotate(-35deg);
+}
+
+.decor-lines span:nth-child(1) {
+    width: 45px;
+}
+
+.decor-lines span:nth-child(2) {
+    width: 60px;
+}
+
+.decor-lines span:nth-child(3) {
+    width: 35px;
+}
+
+
+/* ================================
+   CALCULADORA
+================================ */
+
+.calculator-area {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 250px;
+}
+
+.calculator {
+    width: 165px;
+    height: 200px;
+
+    padding: 14px;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(145deg, #273576, #10183c);
+
+    border: 3px solid #5962ff;
+
+    box-shadow:
+        0 0 15px rgba(69, 109, 255, 0.8),
+        0 20px 35px rgba(0, 0, 0, 0.5);
+
+    transform: rotate(7deg);
+
+    animation: calculatorFloat 4s ease-in-out infinite;
+}
+
+@keyframes calculatorFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(7deg);
+    }
+
+    50% {
+        transform: translateY(-12px) rotate(4deg);
+    }
+}
+
+.calculator-screen {
+    height: 42px;
+
+    padding: 8px;
+
+    border: 2px solid #36d7ff;
+
+    border-radius: 9px;
+
+    background: #07102d;
+
+    color: #6eeaff;
+
+    font-family: monospace;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 0 12px rgba(48, 215, 255, 0.6);
+}
+
+.calculator-buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 7px;
+
+    margin-top: 13px;
+}
+
+.calculator-buttons button {
+    height: 22px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: linear-gradient(
+        145deg,
+        #a878ff,
+        #5e54d8
+    );
+
+    box-shadow:
+        inset 0 2px 2px rgba(255,255,255,0.25),
+        0 2px 4px rgba(0,0,0,0.4);
+}
+
+.calculator-buttons .equal {
+    height: 51px;
+
+    grid-row: span 2;
+
+    background: linear-gradient(
+        145deg,
+        #ffc14d,
+        #ff8f00
+    );
+}
+
+
+/* ================================
+   DESTELLOS DE LA CALCULADORA
+================================ */
+
+.calculator-lines {
+    position: absolute;
+
+    width: 260px;
+    height: 220px;
+
+    pointer-events: none;
+}
+
+.calculator-lines span {
+    position: absolute;
+
+    width: 35px;
+    height: 6px;
+
+    border-radius: 20px;
+
+    background: #32cfff;
+
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+.calculator-lines span:nth-child(1) {
+    left: 15px;
+    top: 70px;
+    transform: rotate(-20deg);
+}
+
+.calculator-lines span:nth-child(2) {
+    right: 15px;
+    top: 55px;
+    transform: rotate(20deg);
+}
+
+.calculator-lines span:nth-child(3) {
+    left: 25px;
+    bottom: 50px;
+    transform: rotate(10deg);
+
+    background: #9b55ff;
+}
+
+.calculator-lines span:nth-child(4) {
+    right: 20px;
+    bottom: 40px;
+    transform: rotate(-15deg);
+
+    background: #9b55ff;
+}
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.4;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+}
+
+
+/* ================================
+   TARJETAS
+================================ */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 28px;
+
+    margin-top: 15px;
+}
+
+.card {
+    position: relative;
+
+    min-height: 380px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    border-radius: 27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(18, 40, 92, 0.95),
+            rgba(6, 18, 55, 0.95)
+        );
+
+    border: 2px solid;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* efecto hover */
+
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+}
+
+.card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+
+    top: -100px;
+    right: -100px;
+
+    background: rgba(255,255,255,0.08);
+
+    filter: blur(10px);
+}
+
+
+/* COLORES DE TARJETAS */
+
+.linear-card {
+    border-color: #168cff;
+
+    box-shadow:
+        0 0 20px rgba(22, 140, 255, 0.15);
+}
+
+.linear-card:hover {
+    box-shadow:
+        0 0 35px rgba(22, 140, 255, 0.45);
+}
+
+.quadratic-card {
+    border-color: #734bff;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(44, 30, 108, 0.9),
+            rgba(18, 13, 60, 0.95)
+        );
+}
+
+.quadratic-card:hover {
+    box-shadow:
+        0 0 35px rgba(115, 75, 255, 0.45);
+}
+
+.polynomial-card {
+    border-color: #00c8b0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5, 80, 88, 0.9),
+            rgba(4, 35, 54, 0.95)
+        );
+}
+
+.polynomial-card:hover {
+    box-shadow:
+        0 0 35px rgba(0, 200, 176, 0.45);
+}
+
+
+/* ================================
+   GRAFICAS DE TARJETAS
+================================ */
+
+.card-graph {
+    height: 155px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-graph svg {
+    width: 100%;
+    height: 150px;
+}
+
+.card-graph line,
+.card-graph path {
+    fill: none;
+
+    stroke-width: 5;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+.linear-card .card-graph line,
+.linear-card .card-graph path {
+    stroke: #12c8ff;
+}
+
+.quadratic-card .card-graph line,
+.quadratic-card .card-graph path {
+    stroke: #b46aff;
+}
+
+.polynomial-card .card-graph line,
+.polynomial-card .card-graph path {
+    stroke: #00e0ca;
+}
+
+
+/* ================================
+   TITULOS
+================================ */
+
+.card h2 {
+    position: relative;
+
+    font-size: 27px;
+
+    margin-top: 5px;
+
+    color: white;
+}
+
+.card p {
+    position: relative;
+
+    margin: 10px auto 20px;
+
+    max-width: 260px;
+
+    color: #d2d8f3;
+
+    font-size: 17px;
+
+    line-height: 1.45;
+}
+
+
+/* ================================
+   BOTON ENTRAR
+================================ */
+
+.enter-button {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    width: 80%;
+
+    margin: auto;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.enter-button span {
+    font-size: 25px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+.enter-button:hover {
+    transform: scale(1.05);
+}
+
+.enter-button:hover span {
+    transform: translateX(6px);
+}
+
+.linear-card .enter-button {
+    background: linear-gradient(
+        90deg,
+        #128cff,
+        #139eea
+    );
+}
+
+.quadratic-card .enter-button {
+    background: linear-gradient(
+        90deg,
+        #703fff,
+        #974bff
+    );
+}
+
+.polynomial-card .enter-button {
+    background: linear-gradient(
+        90deg,
+        #00bca8,
+        #16d4b5
+    );
+}
+
+
+/* ================================
+   PARTICULAS
+================================ */
+
+.particles {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 2;
+}
+
+.particles span {
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #19cfff;
+
+    opacity: 0.7;
+
+    animation: particleFloat 7s infinite ease-in-out;
+}
+
+.particles span:nth-child(1) {
+    left: 10%;
+    top: 70%;
+}
+
+.particles span:nth-child(2) {
+    left: 25%;
+    top: 30%;
+
+    animation-delay: 1s;
+}
+
+.particles span:nth-child(3) {
+    left: 40%;
+    top: 80%;
+
+    animation-delay: 2s;
+}
+
+.particles span:nth-child(4) {
+    left: 55%;
+    top: 20%;
+
+    animation-delay: 3s;
+}
+
+.particles span:nth-child(5) {
+    left: 70%;
+    top: 60%;
+
+    animation-delay: 1.5s;
+}
+
+.particles span:nth-child(6) {
+    left: 82%;
+    top: 35%;
+
+    animation-delay: 2.5s;
+}
+
+.particles span:nth-child(7) {
+    left: 90%;
+    top: 75%;
+
+    animation-delay: 3.5s;
+}
+
+.particles span:nth-child(8) {
+    left: 15%;
+    top: 45%;
+
+    animation-delay: 4s;
+}
+
+
+@keyframes particleFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: translateY(-30px);
+        opacity: 1;
+    }
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card {
+        min-height: 360px;
+    }
+
+    .graph {
+        opacity: 0.25;
+    }
+
+    .left-lines,
+    .right-lines {
+        display: none;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        padding-top: 40px;
+    }
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+    .header p {
+        font-size: 16px;
+    }
+
+    .formula {
+        font-size: 25px;
+    }
+
+    .calculator-area {
+        height: 220px;
+    }
+}
+/* ================================
+   RACIONAL
+================================ */
+
+.rational-card {
+    border-color: #ff5caa;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(92, 25, 76, 0.9),
+            rgba(30, 10, 48, 0.95)
+        );
+}
+
+.rational-card:hover {
+    box-shadow:
+        0 0 35px rgba(255, 92, 170, 0.45);
+}
+
+.rational-card .card-graph line,
+.rational-card .card-graph path {
+    stroke: #ff6bb5;
+}
+
+
+/* ================================
+   TRIGONOMÉTRICA
+================================ */
+
+.trigonometric-card {
+    border-color: #ffb52e;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(94, 65, 12, 0.9),
+            rgba(32, 24, 5, 0.95)
+        );
+}
+
+.trigonometric-card:hover {
+    box-shadow:
+        0 0 35px rgba(255, 181, 46, 0.45);
+}
+
+.trigonometric-card .card-graph line,
+.trigonometric-card .card-graph path {
+    stroke: #ffc44f;
+}
+
+
+/* ================================
+   ANIMACIÓN DE LAS GRÁFICAS
+================================ */
+
+.card-graph path {
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+
+    animation: drawGraph 3s ease forwards;
+}
+
+@keyframes drawGraph {
+
+    to {
+        stroke-dashoffset: 0;
+    }
+
+}

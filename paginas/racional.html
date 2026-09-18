@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Función Racional</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <!-- Math.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.js"></script>
+
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js"></script>
+
+</head>
+
+
+<body>
+
+<header class="encabezado">
+
+    <h1>Función Racional</h1>
+
+    <p>
+        Calculadora y graficadora de funciones racionales
+    </p>
+
+</header>
+
+
+<main class="contenedor">
+
+
+    <section>
+
+        <h2>Ingrese la función</h2>
+
+
+        <label for="funcion">
+            Función racional:
+        </label>
+
+
+        <input
+            type="text"
+            id="funcion"
+            placeholder="Ejemplo: (2*x+1)/(x-3)"
+        >
+
+
+        <p class="ayuda">
+            Ejemplo:
+            <strong>(2*x+1)/(x-3)</strong>
+        </p>
+
+
+        <button
+            id="calcular"
+            type="button">
+
+            Calcular
+
+        </button>
+
+
+        <a
+            href="../index.html"
+            class="volver">
+
+            ← Volver al menú principal
+
+        </a>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Resultados</h2>
+
+
+        <div id="resultado">
+
+            Ingrese una función y presione
+            "Calcular".
+
+        </div>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Tabla de valores</h2>
+
+        <div id="tablaValores"></div>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Gráfica</h2>
+
+        <div id="graficaFuncion"></div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Proyecto Final - Calculadora de Funciones
+    </p>
+
+</footer>
+
+
+<script src="../js/racional.js"></script>
+
+</body>
+
+</html>

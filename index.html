@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Calculadora de Funciones</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- FONDO MATEMÁTICO -->
+    <div class="math-background">
+
+        <span class="formula formula-1">ax² + bx + c = 0</span>
+        <span class="formula formula-2">y = mx + b</span>
+        <span class="formula formula-3">π</span>
+        <span class="formula formula-4">√</span>
+        <span class="formula formula-5">+</span>
+        <span class="formula formula-6">Σ</span>
+
+        <div class="graph graph-left">
+            <svg viewBox="0 0 300 180">
+                <line x1="20" y1="90" x2="280" y2="90" />
+                <line x1="150" y1="15" x2="150" y2="165" />
+
+                <path d="M20 95
+                         C50 10, 90 15, 120 90
+                         C145 165, 185 165, 215 90
+                         C240 30, 260 40, 280 90" />
+            </svg>
+        </div>
+
+        <div class="graph graph-right">
+            <svg viewBox="0 0 300 180">
+                <line x1="20" y1="145" x2="280" y2="145" />
+                <line x1="150" y1="15" x2="150" y2="165" />
+
+                <path d="M60 135
+                         Q150 0 240 135" />
+            </svg>
+        </div>
+
+    </div>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- TITULO -->
+        <header class="header">
+
+            <div class="decor-lines left-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <h1>
+                Calculadora de
+                <span>Funciones</span>
+            </h1>
+
+            <p>
+                Resuelve, aprende y explora el mundo de las matemáticas
+            </p>
+
+            <div class="decor-lines right-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+        </header>
+
+
+        <!-- CALCULADORA -->
+        <section class="calculator-area">
+
+            <div class="calculator">
+
+                <div class="calculator-screen">
+                    <span>f(x) =</span>
+                </div>
+
+                <div class="calculator-buttons">
+
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button></button>
+
+                    <button></button>
+                    <button></button>
+                    <button></button>
+                    <button class="equal">=</button>
+
+                    <button></button>
+                    <button></button>
+                    <button></button>
+
+                </div>
+
+            </div>
+
+            <div class="calculator-lines">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- RACIONAL -->
+<article class="card rational-card">
+
+    <div class="card-graph">
+
+        <svg viewBox="0 0 260 150">
+
+            <line x1="20" y1="75" x2="240" y2="75" />
+            <line x1="130" y1="10" x2="130" y2="140" />
+
+            <path d="M35 35
+                     C70 45, 90 55, 115 68" />
+
+            <path d="M145 82
+                     C175 95, 200 105, 230 115" />
+
+        </svg>
+
+    </div>
+
+    <h2>Función Racional</h2>
+
+    <p>
+        Analiza y grafica funciones
+        racionales.
+    </p>
+
+    <a href="paginas/racional.html" class="enter-button">
+        Entrar
+        <span>→</span>
+    </a>
+
+</article>
+
+
+<!-- TRIGONOMÉTRICA -->
+<article class="card trigonometric-card">
+
+    <div class="card-graph">
+
+        <svg viewBox="0 0 260 150">
+
+            <line x1="15" y1="75" x2="245" y2="75" />
+            <line x1="130" y1="15" x2="130" y2="140" />
+
+            <path d="M15 75
+                     C35 25, 55 25, 75 75
+                     C95 125, 115 125, 135 75
+                     C155 25, 175 25, 195 75
+                     C215 125, 235 125, 245 75" />
+
+        </svg>
+
+    </div>
+
+    <h2>Función Trigonométrica</h2>
+
+    <p>
+        Calcula y grafica funciones
+        trigonométricas.
+    </p>
+
+    <a href="paginas/trigonometrica.html" class="enter-button">
+        Entrar
+        <span>→</span>
+    </a>
+
+</article>
+
+        </section>
+
+
+        <!-- TARJETAS -->
+        <section class="cards">
+
+
+            <!-- LINEAL -->
+            <article class="card linear-card">
+
+                <div class="card-graph">
+
+                    <svg viewBox="0 0 260 150">
+
+                        <line x1="25" y1="125" x2="240" y2="125" />
+                        <line x1="55" y1="140" x2="55" y2="15" />
+
+                        <line x1="55" y1="110"
+                              x2="190" y2="35" />
+
+                        <polygon points="190,35 174,38 182,50" />
+
+                    </svg>
+
+                </div>
+
+                <h2>Función Lineal</h2>
+
+                <p>
+                    Calcula y grafica funciones
+                    de primer grado.
+                </p>
+
+                <a href="paginas/lineal.html" class="enter-button">
+                    Entrar
+                    <span>→</span>
+                </a>
+
+            </article>
+
+
+            <!-- CUADRATICA -->
+            <article class="card quadratic-card">
+
+                <div class="card-graph">
+
+                    <svg viewBox="0 0 260 150">
+
+                        <line x1="20" y1="125" x2="240" y2="125" />
+                        <line x1="130" y1="145" x2="130" y2="10" />
+
+                        <path d="M55 25 Q130 150 205 25" />
+
+                    </svg>
+
+                </div>
+
+                <h2>Función Cuadrática</h2>
+
+                <p>
+                    Resuelve y grafica funciones
+                    de segundo grado.
+                </p>
+
+                <a href="paginas/cuadratica.html" class="enter-button">
+                    Entrar
+                    <span>→</span>
+                </a>
+
+            </article>
+
+
+            <!-- POLINOMIAL -->
+            <article class="card polynomial-card">
+
+                <div class="card-graph">
+
+                    <svg viewBox="0 0 260 150">
+
+                        <line x1="20" y1="80" x2="240" y2="80" />
+                        <line x1="130" y1="145" x2="130" y2="10" />
+
+                        <path d="M35 45
+                                 C60 10, 80 25, 100 80
+                                 C120 135, 140 140, 160 80
+                                 C180 20, 205 15, 225 55" />
+
+                    </svg>
+
+                </div>
+
+                <h2>Función Polinomial</h2>
+
+                <p>
+                    Encuentra las raíces y grafica
+                    polinomios.
+                </p>
+
+                <a href="paginas/polinomial.html" class="enter-button">
+                    Entrar
+                    <span>→</span>
+                </a>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- PARTICULAS -->
+    <div class="particles">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+</body>
+</html>

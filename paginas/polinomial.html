@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Función Polinomial</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js"></script>
+
+</head>
+
+
+<body>
+
+<header class="encabezado">
+
+    <h1>Función Polinomial</h1>
+
+    <p>
+        Calculadora y graficadora de funciones polinomiales
+    </p>
+
+</header>
+
+
+<main class="contenedor">
+
+
+    <section>
+
+        <h2>Datos del polinomio</h2>
+
+
+        <label for="grado">
+            Seleccione el grado:
+        </label>
+
+
+        <select id="grado">
+
+            <option value="1">
+                Grado 1
+            </option>
+
+            <option value="2" selected>
+                Grado 2
+            </option>
+
+            <option value="3">
+                Grado 3
+            </option>
+
+        </select>
+
+
+        <button
+            id="generar"
+            type="button">
+
+            Generar coeficientes
+
+        </button>
+
+
+        <div id="coeficientes"></div>
+
+
+        <button
+            id="calcular"
+            type="button"
+            style="display: none;">
+
+            Calcular función
+
+        </button>
+
+
+        <a href="../index.html"
+           class="volver">
+
+            ← Volver al menú principal
+
+        </a>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Resultados</h2>
+
+        <div id="resultado">
+
+            Seleccione el grado y genere los coeficientes.
+
+        </div>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Tabla de valores</h2>
+
+        <div id="tablaValores"></div>
+
+    </section>
+
+
+
+    <section>
+
+        <h2>Gráfica</h2>
+
+        <div id="graficaFuncion"></div>
+
+    </section>
+
+
+</main>
+
+
+<footer>
+
+    <p>
+        Proyecto Final - Calculadora de Funciones
+    </p>
+
+</footer>
+
+
+<script src="../js/polinomial.js"></script>
+
+</body>
+
+</html>

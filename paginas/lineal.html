@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Función Lineal</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <!-- Math.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/14.0.1/math.js"></script>
+
+    <!-- Plotly -->
+    <script src="https://cdn.plot.ly/plotly-3.1.0.min.js"></script>
+
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+        <h1>Función Lineal</h1>
+
+        <p>
+            Calculadora de funciones lineales
+        </p>
+
+    </header>
+
+
+    <main class="contenedor">
+
+        <section class="calculadora">
+
+            <h2>Ingresar función</h2>
+
+            <p class="ayuda">
+                Utiliza la forma:
+                <strong>y = mx + b</strong>
+            </p>
+
+            <label for="funcion">
+                Función:
+            </label>
+
+            <input
+                type="text"
+                id="funcion"
+                placeholder="Ejemplo: 2*x + 3"
+            >
+
+            <button id="calcular">
+                Calcular y Graficar
+            </button>
+
+            <a href="../index.html"
+               class="boton volver">
+                ← Volver al inicio
+            </a>
+
+        </section>
+
+
+        <section class="resultado">
+
+            <h2>Resultados</h2>
+
+            <div id="resultado">
+
+                Aquí aparecerán los resultados.
+
+            </div>
+
+        </section>
+
+
+        <section class="tabla">
+
+            <h2>Tabla de valores</h2>
+
+            <div id="tablaValores">
+
+                Aquí aparecerá la tabla.
+
+            </div>
+
+        </section>
+
+
+        <section class="grafica">
+
+            <h2>Gráfica</h2>
+
+            <div id="graficaFuncion"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            Proyecto Final - Calculadora de Funciones
+        </p>
+
+    </footer>
+
+
+    <script src="../js/lineal.js"></script>
+
+</body>
+
+</html>
