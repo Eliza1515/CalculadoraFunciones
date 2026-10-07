@@ -934,3 +934,378 @@ body {
     }
 
 }
+/* =====================================================
+   ESTILO COLORIDO PARA LAS PANTALLAS DE FUNCIONES
+   ===================================================== */
+
+/* Fondo general */
+body {
+    background:
+        radial-gradient(circle at 10% 15%, rgba(91, 214, 255, 0.18), transparent 25%),
+        radial-gradient(circle at 90% 85%, rgba(255, 91, 196, 0.18), transparent 27%),
+        linear-gradient(135deg, #090d2d, #15154d 48%, #21103e);
+
+    color: white;
+}
+
+
+/* =====================================================
+   ENCABEZADO
+   ===================================================== */
+
+.encabezado {
+    position: relative;
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    background: linear-gradient(
+        135deg,
+        #7357ff,
+        #3bbde8 55%,
+        #ee67c7
+    );
+
+    border: 2px solid rgba(255, 255, 255, 0.28);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.30);
+
+    padding: 25px;
+}
+
+
+/* Decoración del encabezado */
+
+.encabezado::before {
+    content: "";
+
+    position: absolute;
+
+    width: 170px;
+    height: 170px;
+
+    left: -70px;
+    top: -95px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.20);
+}
+
+
+.encabezado::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -60px;
+    bottom: -90px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 225, 90, 0.25);
+}
+
+
+/* Mantiene el texto encima de la decoración */
+
+.encabezado h1,
+.encabezado p {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =====================================================
+   CONTENEDOR DE LAS PANTALLAS
+   ===================================================== */
+
+.contenedor {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   TARJETAS / SECCIONES
+   ===================================================== */
+
+.contenedor section {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 23px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(25, 35, 83, 0.97),
+        rgba(10, 17, 52, 0.98)
+    );
+
+    border: 2px solid rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.28);
+
+    padding: 25px;
+}
+
+
+/* Diferentes colores para las tarjetas */
+
+.contenedor section:nth-child(1) {
+    border-color: #42d9ff;
+}
+
+
+.contenedor section:nth-child(2) {
+    border-color: #b875ff;
+}
+
+
+.contenedor section:nth-child(3) {
+    border-color: #ff70bd;
+}
+
+
+.contenedor section:nth-child(4) {
+    border-color: #ffd15c;
+}
+
+
+/* =====================================================
+   TITULOS
+   ===================================================== */
+
+.contenedor h2 {
+    color: white;
+}
+
+
+.contenedor h2::after {
+    content: "";
+
+    display: block;
+
+    width: 58px;
+    height: 4px;
+
+    margin-top: 8px;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        90deg,
+        #42d9ff,
+        #b875ff,
+        #ff70bd
+    );
+}
+
+
+/* =====================================================
+   ETIQUETAS
+   ===================================================== */
+
+.contenedor label {
+    color: #e9ecff;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   CAMPOS DE TEXTO
+   ===================================================== */
+
+.contenedor input,
+.contenedor select {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 2px solid rgba(92, 213, 255, 0.45);
+
+    border-radius: 13px;
+
+    background: rgba(5, 12, 38, 0.90);
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+/* Cuando hacemos clic en un campo */
+
+.contenedor input:focus,
+.contenedor select:focus {
+    border-color: #58dcff;
+
+    box-shadow:
+        0 0 0 4px rgba(88, 220, 255, 0.12),
+        0 0 15px rgba(88, 220, 255, 0.25);
+}
+
+
+/* Texto de ejemplo */
+
+.contenedor input::placeholder {
+    color: #aab6df;
+}
+
+
+/* =====================================================
+   BOTONES
+   ===================================================== */
+
+.contenedor button,
+.contenedor .boton {
+    border: none;
+
+    border-radius: 14px;
+
+    padding: 12px 20px;
+
+    background: linear-gradient(
+        90deg,
+        #7251ff,
+        #b84fff,
+        #ff5cae
+    );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(122, 75, 255, 0.30);
+
+    transition: 0.2s;
+}
+
+
+/* Efecto al pasar el mouse */
+
+.contenedor button:hover,
+.contenedor .boton:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 25px rgba(190, 74, 255, 0.40);
+}
+
+
+/* =====================================================
+   BOTÓN REGRESAR
+   ===================================================== */
+
+.contenedor .volver {
+    background: linear-gradient(
+        90deg,
+        #168fff,
+        #16c9dc
+    );
+}
+
+
+/* =====================================================
+   RESULTADOS
+   ===================================================== */
+
+#resultado,
+#tablaValores {
+    color: #e8ecff;
+}
+
+
+#resultado strong {
+    color: #6fe7ff;
+}
+
+
+/* =====================================================
+   TABLAS
+   ===================================================== */
+
+#tablaValores table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+#tablaValores th {
+    background: linear-gradient(
+        90deg,
+        #7352ff,
+        #b94fff
+    );
+
+    color: white;
+
+    padding: 10px;
+}
+
+
+#tablaValores td {
+    color: #edf0ff;
+
+    padding: 9px;
+
+    text-align: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* Filas alternadas */
+
+#tablaValores tr:nth-child(even) td {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* =====================================================
+   GRÁFICA
+   ===================================================== */
+
+#graficaFuncion {
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.035);
+}
+
+
+/* =====================================================
+   DISEÑO PARA CELULAR
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .contenedor {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor section {
+        padding: 20px;
+    }
+
+}
